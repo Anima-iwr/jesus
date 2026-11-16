@@ -6,7 +6,6 @@ category: "Inner Life"
 emoji: "🕊️"
 scripture: "2 Corinthians 4:16; Ephesians 3:16; Romans 8:6"
 ---
-
 # The Invisible Inner Man
 
 *Understanding Spirit, Soul, and Consciousness*
