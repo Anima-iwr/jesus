@@ -2,7 +2,6 @@
 ---
 title: "The Renewed Mind"
 subtitle: "Thinking Beyond Limitations"
-date: 2026-11-16
 category: "Mind Renewal"
 emoji: "🧠"
 scripture: "Romans 12:2; 1 Corinthians 2:16; Colossians 3:2"
