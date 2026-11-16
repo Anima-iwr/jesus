@@ -1,7 +1,6 @@
 ---
 title: "The Invisible Inner Man"
 subtitle: "Understanding Spirit, Soul, and Consciousness"
-date: 2026-11-14
 category: "Inner Life"
 emoji: "🕊️"
 scripture: "2 Corinthians 4:16; Ephesians 3:16; Romans 8:6"
