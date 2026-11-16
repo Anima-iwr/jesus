@@ -1,0 +1,12 @@
+/* Reflections & Revelations: add as linked stylesheet */
+.reflections-section{background:linear-gradient(145deg,#24143f,#48266f 55%,#6e3e85);color:#fff;overflow:hidden}
+.reflections-section .eyebrow{color:#f7d78e}.reflections-section .ref-intro{color:#e7d9f4;max-width:700px}
+.ref-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:26px 0}
+.ref-controls{display:flex;gap:10px}.ref-arrow{width:46px;height:46px;border-radius:50%;border:1px solid #f3d49a;background:#ffffff1b;color:#fff;font-size:1.45rem;cursor:pointer}
+.ref-arrow:hover{background:#f6c979;color:#2b1647}.ref-arrow:disabled{opacity:.35;cursor:default}
+.ref-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#d5b5e2 transparent;padding:8px 2px 24px}
+.ref-card{scroll-snap-align:start;min-width:0;border-radius:25px;padding:29px;display:flex;flex-direction:column;min-height:335px;box-shadow:0 12px 28px #150d2b35;border:1px solid #ffffff55;background:linear-gradient(155deg,#fff5e6,#f4e5ff);color:#2c1849}
+.ref-card:nth-child(3n+2){background:linear-gradient(155deg,#e9f8f5,#e9e1ff)}.ref-card:nth-child(3n+3){background:linear-gradient(155deg,#ffecf2,#fff1ce)}
+.ref-icon{font-size:2.4rem}.ref-date{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#684e80;font-weight:700;margin:14px 0}.ref-card h3{font-size:1.55rem}.ref-card p{color:#5b4d68}.ref-read{margin-top:auto;align-self:flex-start;background:#44236e;color:white;text-decoration:none;border-radius:30px;padding:11px 19px;font-weight:700}
+.ref-read:hover{background:#73449d}.ref-status{color:#f4ddf5}
+@media(max-width:900px){.ref-track{grid-auto-columns:calc((100% - 20px)/2)}}@media(max-width:600px){.ref-track{grid-auto-columns:88%}.ref-card{min-height:310px}}
