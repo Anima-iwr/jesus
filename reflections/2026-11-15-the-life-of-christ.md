@@ -1,7 +1,6 @@
 ---
 title: "The Life of Christ"
 subtitle: "Discovering Our Identity in Him"
-date: 2026-11-15
 category: "Life in Christ"
 emoji: "✨"
 scripture: "John 14:6; Galatians 2:20; 2 Corinthians 5:17"
