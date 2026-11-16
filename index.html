@@ -15,7 +15,7 @@
 }
 </style>
 <link rel="stylesheet" href="reflections.css">
-</head><script src="reflections.js" defer></script>
+</head>
 <body><header class="nav"><div class="container navinner"><a class="logo" href="#home">Come, <span>Taste & See</span> ✦</a><button class="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="navlinks" aria-label="Main navigation"><a href="#questions">Your story</a><a href="#truth">Discover</a><a href="#journey">The journey</a>
 <a href="#reflections">Reflections</a><a href="#about">About me</a><a href="#faq">FAQ</a><a class="btn dark" href="#join">Join for free</a></nav></div></header>
 <main><section class="hero" id="home"><i class="sparkle s1"></i><i class="sparkle s2"></i><i class="sparkle s3"></i><div class="container"><div class="eyebrow">An invitation to discover life in Christ</div><h1>Come.<br>Taste.<br><em>And see.</em></h1><p>What if there is <strong>more</strong> than merely surviving? More than success. More than abundance. A life rooted in truth, love, freedom, purpose and the inexhaustible life of Jesus Christ.</p><p>You don't need to have all the answers. You only need to be willing to explore.</p><div class="actions"><a href="#questions" class="btn primary">Find what speaks to you ↓</a><a href="#join" class="btn secondary">Explore the free journey</a></div><div class="hero-quote">“Taste and see that the LORD is good.” <small>Psalm 34:8 · KJV</small></div></div></section>
@@ -74,4 +74,6 @@ document.querySelector('#topics').innerHTML=topics.map(([emoji,title,desc,verse]
 const menu=document.querySelector('.menu'),nav=document.querySelector('.navlinks');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));document.querySelector('#year').textContent=new Date().getFullYear();
 if(GOOGLE_FORM_URL.startsWith('https://')){const link=document.querySelector('#formLink');link.href=GOOGLE_FORM_URL;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Open the free interest form ↗';document.querySelector('#formBox p:last-child').textContent='The form opens in a new tab.'}
-</script></body></html>
+</script>
+<script src="reflections.js" defer></script>
+</body></html>
