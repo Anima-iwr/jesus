@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#281845">
+<title>Reflection | Come, Taste &amp; See</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#fcf8f4,#f6effa);color:#2c1947;font:17px/1.85 'DM Sans',sans-serif}header{background:#281845;padding:20px 6%;color:#f8d591}header a{color:inherit;text-decoration:none;font-weight:700}main{max-width:920px;margin:45px auto;padding:0 24px 90px}.paper{background:#fff;border:1px solid #e8dced;border-radius:25px;padding:clamp(24px,5vw,65px);box-shadow:0 16px 50px #24143f12}.back{display:inline-block;margin-bottom:18px;color:#6d438c;text-decoration:none;font-weight:700}h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.23}h1{font-size:clamp(2.5rem,6vw,4rem);margin:18px 0}h2{font-size:1.7rem;margin-top:38px}h3{font-size:1.35rem}p,li{color:#433953}li{margin-bottom:8px}blockquote{border-left:4px solid #e9bd70;padding-left:20px;color:#5a426a}#meta{color:#865c94;font-size:.93rem;font-weight:600}#subtitle{color:#6e5581;font-style:italic;font-size:1.15rem}#scripture{background:#fff5e6;border-left:4px solid #e9bd70;padding:12px 18px;border-radius:8px}a{color:#623d8d}hr{border:0;border-top:1px solid #eaddec;margin:30px 0}#loading{color:#755b84}#content{overflow-wrap:anywhere}#content h1:first-child{display:none}#content p:first-child{margin-top:0}#content ul,#content ol{padding-left:1.6em}@media(max-width:600px){main{margin:25px auto;padding:0 14px 50px}.paper{border-radius:18px}}
+</style>
+</head>
+<body>
+<header><a href="index.html#reflections">✦ Come, Taste &amp; See</a></header>
+<main><a class="back" href="index.html#reflections">← All reflections</a><article class="paper" id="article"><p id="loading">Loading reflection…</p></article></main>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+<script>
+(async function(){
+ const box=document.getElementById('article');
+ const file=new URLSearchParams(window.location.search).get('file');
+ if(!file||!/^reflections\/[a-zA-Z0-9._-]+\.md$/.test(file)){box.textContent='Reflection not found. Please return to the reflections page.';return;}
+ try{
+   const response=await fetch(file,{cache:'no-store'});
+   if(!response.ok)throw new Error('The Markdown file was not found (HTTP '+response.status+'). Check its filename in GitHub.');
+   let raw=(await response.text()).replace(/^\uFEFF/,'').replace(/\r\n?/g,'\n');
+   // Accept standard YAML front matter and an accidentally escaped closing delimiter.
+   let metadata={};
+   const front=raw.match(/^\s*---\s*\n([\s\S]*?)\n\s*\\?---\s*(?:\n|$)/);
+   if(front){
+     for(const line of front[1].split('\n')){
+       const m=line.match(/^([a-zA-Z_][\w-]*):\s*(.*)$/);
+       if(m)metadata[m[1]]=m[2].trim().replace(/^(["'])([\s\S]*)\1$/,'$2');
+     }
+     raw=raw.slice(front[0].length);
+   }
+   // Some editors paste the entire Markdown file with escaped newlines or formatting.
+   // Remove any stray metadata lines at the beginning only.
+   raw=raw.replace(/^(?:\s*(?:title|subtitle|date|category|emoji|scripture):[^\n]*\n)+/i,'').trim();
+   if(!window.marked||!window.DOMPurify)throw new Error('Markdown reader libraries did not load. Please refresh or check your connection.');
+   const title=metadata.title||((raw.match(/^#\s+(.+)$/m)||[])[1])||'Reflection';
+   const subtitle=metadata.subtitle||'';
+   const meta=[metadata.date,metadata.category].filter(Boolean).join(' · ');
+   // Avoid repeating the title and subtitle already shown in the article header.
+   raw=raw.replace(/^#\s+[^\n]+\n+/,'');
+   if(subtitle){const esc=subtitle.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');raw=raw.replace(new RegExp('^\\s*\\*'+esc+'\\*\\s*\\n*'),'');}
+   box.replaceChildren();
+   const metaEl=document.createElement('div');metaEl.id='meta';metaEl.textContent=meta;box.append(metaEl);
+   const h1=document.createElement('h1');h1.textContent=title;box.append(h1);
+   if(subtitle){const p=document.createElement('p');p.id='subtitle';p.textContent=subtitle;box.append(p);}
+   const content=document.createElement('div');content.id='content';content.innerHTML=DOMPurify.sanitize(marked.parse(raw));box.append(content);
+   document.title=title+' | Come, Taste & See';
+ }catch(error){
+   box.replaceChildren();const h=document.createElement('h2');h.textContent='This reflection could not be loaded';box.append(h);
+   const p=document.createElement('p');p.textContent=error.message;box.append(p);
+   const a=document.createElement('a');a.href='index.html#reflections';a.textContent='← Return to all reflections';box.append(a);
+ }
+})();
+</script>
+</body>
+</html>
