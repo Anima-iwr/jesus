@@ -1,3 +1,4 @@
+
 ---
 title: "The Renewed Mind"
 subtitle: "Thinking Beyond Limitations"
@@ -31,15 +32,26 @@ The mind receives impressions from many directions: what we read, hear, remember
 
 In 1 Corinthians 2:16, Paul speaks of the mind of Christ. This is not a claim that believers know everything or never make mistakes. It is a profound invitation to receive God's wisdom through the Spirit and to let the character of Jesus reshape our judgments.
 
-Christ's way of thinking is expressed in humility, truth, love, obedience, courage, and mercy. A renewed mind does not merely ask, *How can I become more successful?* It also asks, *What is true? What is loving? What honors God? How would faithfulness look here?*
+Christ's way of thinking is expressed in humility, truth, love, obedience, courage, and mercy.
 
-Consider a difficult conversation. An old pattern may say, *I must defend myself immediately.* A renewed response may make room to listen, speak truthfully, and answer with patience. The outward event is the same; the inner interpretation and response have changed.
+A renewed mind does not merely ask, *How can I become more successful?*
+
+It also asks:
+
+- What is true?
+- What is loving?
+- What honors God?
+- How would faithfulness look here?
+
+Consider a difficult conversation. An old pattern may say, *I must defend myself immediately.*
+
+A renewed response may make room to listen, speak truthfully, and answer with patience. The outward event is the same; the inner interpretation and response have changed.
 
 ## From knowledge to transformation
 
 A helpful way to meditate on this process is:
 
-**Scripture → attention → understanding → renewed perception → wiser choices → a life increasingly shaped by Christ.**
+**Scripture → Attention → Understanding → Renewed Perception → Wiser Choices → A Life Increasingly Shaped by Christ**
 
 The sequence is not mechanical, and growth is rarely perfectly linear. Yet repeated engagement with the Word, prayer, honest self-examination, and Spirit-led practice can gradually reshape our habits of thought.
 
@@ -58,4 +70,6 @@ Second Corinthians 3:18 presents transformation as becoming increasingly conform
 - What would change if I considered this situation in the light of Christ's character and promises?
 - What is one small sign of renewal I would like to see in my daily life?
 
-**A prayer:** Lord Jesus, teach me to see truthfully. Renew my understanding, my imagination, and my responses. Let my thoughts become more attentive to Your Word, and let my life increasingly reflect Your love. Amen.
+## A prayer
+
+Lord Jesus, teach me to see truthfully. Renew my understanding, my imagination, and my responses. Let my thoughts become more attentive to Your Word, and let my life increasingly reflect Your love. Amen.
